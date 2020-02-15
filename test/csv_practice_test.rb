@@ -7,6 +7,8 @@ require 'minitest/reporters'
 require 'minitest/pride'
 require 'pry'
 
+# require "minitest/skip_dsl"
+
 require_relative '../lib/csv_practice'
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
@@ -21,7 +23,6 @@ describe "CSV and Enumerables Exercise" do
     it 'returns an array of Olympic athletes hashes with the correct information' do
       # Arrange: Nothing to arrange
       #   besides the OLYMPIC_DATA_FILENAME constant variable above
-
       # Act
       olympic_athletes = get_all_olympic_athletes(OLYMPIC_DATA_FILENAME)
 
